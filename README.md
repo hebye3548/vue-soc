@@ -7,7 +7,10 @@
 ``` bash
 # install dependencies
 npm install
-
+npm install supervisor -g
+alias runsoc="supervisor -w './mock' ./build/mock-server.js & node ./build/dev-server"
+# serve with hot reload at localhost:8080 & mock server with hot reload at localhost:3000
+runsoc
 # serve with hot reload at localhost:8080
 npm run dev
 

@@ -5,9 +5,11 @@
   "author": "马若涵 <marh@zhong-ying.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
+    "dev": "node build/dev-server",
     "build": "node build/build.js",
-    "test": ""
+    "mock": "supervisor -w './mock' ./build/mock-server.js",
+    "test": "",
+    "start":""
   },
   "dependencies": {
     "vue": "^1.0.21",
@@ -42,7 +44,7 @@
     "vue-strap": "yuche/vue-strap",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.2",
-    "webpack-dev-middleware": "^1.4.0",
+    "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0",
     "webpack-merge": "^0.8.3"
   }
