@@ -5,11 +5,11 @@
   "author": "马若涵 <marh@zhong-ying.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server",
+    "dev": "node build/dev-server ",
     "build": "node build/build.js",
-    "mock": "supervisor -w './mock' ./build/mock-server.js",
-    "test": "",
-    "start":""
+    "mock": "cd mock && supervisor mock-server.js",
+    "test": "npm run dev & supervisor -w './mock' ./build/mock-server",
+    "start":"node ./build/dev-server && cd mock && supervisor mock-server.js"
   },
   "dependencies": {
     "vue": "^1.0.21",

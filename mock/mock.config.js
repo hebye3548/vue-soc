@@ -1,5 +1,5 @@
 module.exports = {
-	'GET:/api/todos': function(req, res) {
+	'GET:/todos': function(req, res) {
     setTimeout(function() {
       res.json({
         success: true,
@@ -21,7 +21,7 @@ module.exports = {
       });
     }, 500);
   },
-  'GET:/api/authRole/save1': function(req, res) {
+  'POST:/api/authRole/save1': function(req, res) {
     res.json(require('./alarm/alarm_history'));
   }
 }
